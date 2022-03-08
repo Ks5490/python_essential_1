@@ -37,19 +37,19 @@ if __name__ == '__main__':
 
             if operator == "+":
                 answer = add(number1, number2)
-                print(f"{number1}, {operator}, {number2} = {answer}")
+                print(f"{number1} {operator} {number2} = {answer}")
 
             elif operator == "-":
                 answer = sub(number1, number2)
-                print(f"{number1}, {operator}, {number2} = {answer}")
+                print(f"{number1} {operator} {number2} = {answer}")
 
             elif operator == "*":
                 answer = multi(number1, number2)
-                print(f"{number1}, {operator}, {number2} = {answer}")
+                print(f"{number1} {operator} {number2} = {answer}")
 
             elif operator == "/":
                 answer = div(number1, number2)
-                print(f"{number1}, {operator}, {number2} = {answer}")
+                print(f"{number1} {operator} {number2} = {answer}")
             else:
                 print('Operator needs to be "+", "-" , "*", "/"')
             break
