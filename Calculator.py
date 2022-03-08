@@ -23,6 +23,7 @@ def get_number(order):
         except ValueError:
             print("You must enter a number")
 
+
 if __name__ == '__main__':
 
     ans_temp = "a"
@@ -54,9 +55,12 @@ if __name__ == '__main__':
                 break
 
             elif operator == "/":
-                answer = div(number1, number2)
-                print(f"{number1} {operator} {number2} = {answer}")
-                break
+                if number2 != 0:
+                    answer = div(number1, number2)
+                    print(f"{number1} {operator} {number2} = {answer}")
+                    break
+                else:
+                    print("Cannot divide by 0 choose different operator")
 
             elif operator == "%":
                 answer = mod(number1, number2)
@@ -64,7 +68,7 @@ if __name__ == '__main__':
                 break
 
             else:
-                print('Operator needs to be "+", "-" , "*", "/", "%')
+                print('Operator needs to be "+", "-" , "*", "/", "%"')
            
 
             
