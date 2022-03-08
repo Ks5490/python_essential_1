@@ -32,27 +32,31 @@ if __name__ == '__main__':
         number2 = get_number("second")
 
         while True:
-            operator_temp = input("What is the mathematical operator: ")
-            operator = operator_temp.strip()
-
+            operator_s = input("What is the mathematical operator: ")
+            operator = operator_s.strip()
+        
             if operator == "+":
                 answer = add(number1, number2)
                 print(f"{number1} {operator} {number2} = {answer}")
+                break
 
             elif operator == "-":
                 answer = sub(number1, number2)
                 print(f"{number1} {operator} {number2} = {answer}")
+                break
 
             elif operator == "*":
                 answer = multi(number1, number2)
                 print(f"{number1} {operator} {number2} = {answer}")
+                break
 
             elif operator == "/":
                 answer = div(number1, number2)
                 print(f"{number1} {operator} {number2} = {answer}")
+                break
             else:
                 print('Operator needs to be "+", "-" , "*", "/"')
-            break
+           
 
             
         while True: 
