@@ -10,6 +10,10 @@ def multi(num1, num2):
 def div(num1, num2):
     return num1 / num2
 
+def mod(num1, num2):
+    return num1 % num2
+
+
 def get_number(order):
     while True:
         number_str = input(f"What is the {order} number: ")
@@ -32,9 +36,8 @@ if __name__ == '__main__':
         number2 = get_number("second")
 
         while True:
-            operator_s = input("What is the mathematical operator: ")
-            operator = operator_s.strip()
-        
+            operator = input("What is the mathematical operator: ")
+           
             if operator == "+":
                 answer = add(number1, number2)
                 print(f"{number1} {operator} {number2} = {answer}")
@@ -54,8 +57,14 @@ if __name__ == '__main__':
                 answer = div(number1, number2)
                 print(f"{number1} {operator} {number2} = {answer}")
                 break
+
+            elif operator == "%":
+                answer = mod(number1, number2)
+                print(f"{number1} {operator} {number2} = {answer}")
+                break
+
             else:
-                print('Operator needs to be "+", "-" , "*", "/"')
+                print('Operator needs to be "+", "-" , "*", "/", "%')
            
 
             
